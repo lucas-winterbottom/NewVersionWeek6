@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ShiftService} from "../shift.service";
-import {Shift} from "../shift";
+import { ShiftService } from "../shift.service";
+import { Shift } from "../shift";
 
 @Component({
   selector: 'app-shifts',
@@ -11,16 +11,16 @@ import {Shift} from "../shift";
 export class ShiftsComponent implements OnInit {
   shifts: Shift[];
   shift: Shift;
-  shift_giver:string;
-  shift_taker:string;
-  shift_date:string;
+  shift_giver: string;
+  shift_taker: string;
+  shift_date: string;
 
   constructor(private shiftService: ShiftService) { }
 
   ngOnInit() {
     this.shiftService.getShifts()
-      .subscribe(shifts => 
-        this.shifts = shifts); 
+      .subscribe(shifts =>
+        this.shifts = shifts);
   }
 
 }

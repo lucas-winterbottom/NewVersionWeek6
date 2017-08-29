@@ -3,14 +3,14 @@
 </p>
 
 <div class="container">
-  <div ngFor* = "let shift of shifts">
-    <div class = "col-md-3">
-      {{shift.shift_giver}
+  <div *ngFor='let shift of shifts'>
+    <div class="col-md-3">
+      {{shift.shift_giver}}
     </div>
-    <div class = "col-md-3">
+    <div class="col-md-3">
       {{shift.shift_taker}}
     </div>
-    <div class = "col-md-3">
+    <div class="col-md-3">
       {{shift.shift_date}}
     </div>
   </div>

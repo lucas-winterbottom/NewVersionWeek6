@@ -14,14 +14,14 @@ mongoose.connect('mongodb://localhost:27017/shiftlist');
 
 //on connection
 mongoose.connection.on('connected', () => {
-    console.log('Connected to database on 27017');
+  console.log('Connected to database on 27017');
 });
 
 //on connection
 mongoose.connection.on('error', (err) => {
-    if (err) {
-        console.log('Error in Database XConnection' + err);
-    }
+  if (err) {
+    console.log('Error in Database XConnection' + err);
+  }
 });
 
 //portno
@@ -41,10 +41,10 @@ app.use('/api', route);
 
 //testing server
 app.get('/', (req, res) => {
-    res.send('foobar');
+  res.send('foobar');
 })
 
 //startup message
 app.listen(port, () => {
-    console.log('server started at port:' + port);
+  console.log('server started at port:' + port);
 })

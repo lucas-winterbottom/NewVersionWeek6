@@ -10,14 +10,14 @@ export class ShiftService {
 
   //retrieve
   getShifts() {
-    return this.http.get('http://localhost/3000/api/shifts')
+    return this.http.get('http://localhost:3000/api/shifts')
       .map(res => res.json());
   }
   //add shift method
   addShift(newShift){
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://://localhost/3000/api/shift', newShift, {headers:headers})
+    return this.http.post('http://://localhost:3000/api/shifts', newShift, {headers:headers})
       .map(res => res.json());
   }
 

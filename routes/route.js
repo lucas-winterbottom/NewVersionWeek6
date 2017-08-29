@@ -35,9 +35,9 @@ router.delete('/shifts:id', (req, res, next) => {
       res.json(err);
     }
     else {
-res.json(result);
+      res.json(result);
     }
-  })
+  });
 });
 
 module.exports = router;

@@ -1,6 +1,4 @@
-<p>
-  shifts works!
-</p>
+<h1> Shift Coverer</h1>
 
 <div class="container">
   <div *ngFor='let shift of shifts'>
@@ -13,5 +11,9 @@
     <div class="col-md-3">
       {{shift.shift_date}}
     </div>
+    <div class="col-md-3">
+      <input type="button" (click)="deleteContact(shift._id)" value="Delete" class="btn btn-danger">
+    </div>
+    <div class="row-md-3"> <br>
+    </div>
   </div>
-</div>
